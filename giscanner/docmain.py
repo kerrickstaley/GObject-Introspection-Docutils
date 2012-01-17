@@ -52,8 +52,7 @@ def doc_main(args):
     if options.language not in ('Python'):
         raise SystemExit('Unsupported language: ' + options.language)
     
-    transformer = _transformer_from_filename(args[1])
-    write_mallard(args[1], transformer=transformer)
+    write_mallard(args[1], options.language)
     
     return 0
 
